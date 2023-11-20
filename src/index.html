@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I AM JAYHKLASIQ</title>
+    <meta name="description"
+      content="This is a one design website that contains everything you need to know about 'JOSHUA O. OLAOYE' popularly known as JAYH KLASIQ">
+    <meta name="author" content="Joshua O. Olaoye">
+    <meta property="og:url"
+      content="https://jayhklasiq.github.io/iamjayhklasiq/">
+    <meta property="og:type" content="webpage">
+    <meta property="og:title" content="Honepage for IAMJAYHKLASIQ">
+    <meta property="og:description"
+      content="This is a one page portfolio website for Jayhklasiq.">
+    <meta property="og:image"
+      content="https://scontent.facc5-2.fna.fbcdn.net/v/t39.30808-6/331349152_1333638284101163_8020748355023949435_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFNOklbsUfmwYFkCOmwEw_-FJTBOHYmM-MUlME4diYz46QopyCi1OAhyvThjAAxgkrEiOMWZHwtIhdlPMs2I6BS&_nc_ohc=ylzvPnvR1_oAX-buvRP&_nc_zt=23&_nc_ht=scontent.facc5-2.fna&oh=00_AfAqCfkGqRKFsIL5XgwPOBanKBc4OdNyUvPh_mr9qTWLDw&oe=64BE5F5C">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title"
+      content="Welcome to IAMJAYHKLASIQ homepage.">
+    <meta name="twitter:description"
+      content="Joshua Olaoye Portfolio and everything you need to know about him.">
+    <meta name="twitter:image"
+      content="https://scontent.facc5-2.fna.fbcdn.net/v/t39.30808-6/331349152_1333638284101163_8020748355023949435_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFNOklbsUfmwYFkCOmwEw_-FJTBOHYmM-MUlME4diYz46QopyCi1OAhyvThjAAxgkrEiOMWZHwtIhdlPMs2I6BS&_nc_ohc=ylzvPnvR1_oAX-buvRP&_nc_zt=23&_nc_ht=scontent.facc5-2.fna&oh=00_AfAqCfkGqRKFsIL5XgwPOBanKBc4OdNyUvPh_mr9qTWLDw&oe=64BE5F5C">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="/dist/output.css">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Kanit:wght@800&family=Merriweather:ital@0;1&display=swap" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </head>
+
+  <body class="bg-[#CAD2C5]">
+    <div id="page" class="flex justify-evenly flex-wrap  m-6 border-2 p-2 gap-10">
+      <header class="">
+        <div id="headerImg">
+          <a class="h-4/5" href="index.html"><img class="border border-transparent rounded-lg" src="/src/assets/images/linkedin-cover-img.jpg"
+              alt="Joshua O. Olaoye's cover art image" class="header_img"></a>
+        </div>
+        <nav class="">
+          <ul class="flex gap-4 p-8 justify-evenly">
+            <li class=""><a href="index.html">Home</a></li>
+            <li x-data="{ open: false }" class="">
+              <a @click="open = ! open" href="#">My Works</a>
+              <ul id="myworks" class="hidden">
+                <li x-show="open" @click.outside="open = false"><a href="#">Web Dev.</a></li>
+                <li x-show="open" @click.outside="open = false"><a href="#">Python</a></li>
+                <li x-show="open" @click.outside="open = false"><a href="#">C #</a></li>
+              </ul>
+            </li>
+            <li class="nav-li"><a href>Curriculum Vitae</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section class="grid grid-cols-3 grid-flow-row-dense p-6">
+          <div class="col-span-2 font-kanit font-black text-6xl">
+            <p>H!</p>
+            <h1>JOSHUA Olaoye,</h1>
+            <p>At Your Service...</p>
+          </div>
+          <div class="col-span-1 about_me font-meri">
+            <span class="block">I was born in 1999 and embarked on</span>
+            <span class="block">my professional journey as a</span>
+            <span class="block">vocationally trained PC repair</span>
+            <span class="block">technician, completing my training in 2017.</span>
+            <span class="block">Since then, I've gained valuable</span>
+            <span class="block">experience in the field, working as an</span>
+            <span class="block">I.T. Technician at <a class="font font-bold" href="http://onshoreconstruction.com/index.php">Onshore Constructions</a></span>
+            <span class="block">and as a Web Developer at <a class="font font-bold" href="https://buildboss.com/">BuildBoss.</a></span>
+            <span class="block">Currently, I am pursuing my education </span>
+            <span class="block">at <a class="font font-bold" href="https://www.byui.edu/">Brigham Young University-Idaho</a></span>
+            <span class="block">with the goal of becoming a Software Engineer.</span>
+          </div>
+        </section>
+
+        <section>
+        </section>
+      </main>
+      <footer class="flex justify-around gap-8">
+        <!-- <div class="flex"> -->
+        <a href="https://github.com/jayhklasiq">
+          <svg xmlns="http://www.w3.org/2000/svg" height="2em"
+            viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path
+              d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z" />
+          </svg></a>
+        <a href="https://www.linkedin.com/in/joshua-o-olaoye/">
+          <svg xmlns="http://www.w3.org/2000/svg" height="2em"
+            viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path
+              d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+          </svg></a>
+        <a href="mailto:joshvolx@gmail.com">
+          <svg xmlns="http://www.w3.org/2000/svg" height="2em"
+            viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path
+              d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+          </svg>
+        </a>
+        <p class="text-2xl">&copy<span class="year "></span> Jayh Klasiq</p>
+        <!-- </div> -->
+      </footer>
+    </div>
+    <script src="/src/assets/scripts/jayh.js" defer></script>
+  </body>
+
+</html>
