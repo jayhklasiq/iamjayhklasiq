@@ -23,26 +23,32 @@
       content="Joshua Olaoye Portfolio and everything you need to know about him.">
     <meta name="twitter:image"
       content="https://scontent.facc5-2.fna.fbcdn.net/v/t39.30808-6/331349152_1333638284101163_8020748355023949435_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFNOklbsUfmwYFkCOmwEw_-FJTBOHYmM-MUlME4diYz46QopyCi1OAhyvThjAAxgkrEiOMWZHwtIhdlPMs2I6BS&_nc_ohc=ylzvPnvR1_oAX-buvRP&_nc_zt=23&_nc_ht=scontent.facc5-2.fna&oh=00_AfAqCfkGqRKFsIL5XgwPOBanKBc4OdNyUvPh_mr9qTWLDw&oe=64BE5F5C">
-    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="/node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="/dist/output.css">
     <link rel="icon" href="images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Kanit:wght@800&family=Merriweather:ital@0;1&display=swap" rel="stylesheet">
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Kanit:wght@800&family=Merriweather:ital@0;1&display=swap"
+      rel="stylesheet">
+    <script defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
 
   <body class="bg-[#CAD2C5]">
-    <div id="page" class="flex justify-evenly flex-wrap  m-6 border-2 p-2 gap-10">
-      <header class="">
+    <div id="page"
+      class="flex justify-evenly flex-wrap m-6 border-2 p-2">
+      <header class>
         <div id="headerImg">
-          <a class="h-4/5" href="index.html"><img class="border border-transparent rounded-lg" src="/src/assets/images/linkedin-cover-img.jpg"
+          <a class="h-4/5" href="index.html"><img
+              class="border border-transparent rounded-lg"
+              src="/src/assets/images/linkedin-cover-img.jpg"
               alt="Joshua O. Olaoye's cover art image" class="header_img"></a>
         </div>
-        <nav class="">
+        <nav class>
           <ul class="flex gap-4 p-8 justify-evenly">
-            <li class=""><a href="index.html">Home</a></li>
-            <li x-data="{ open: false }" class="">
+            <li class><a href="index.html">Home</a></li>
+            <li x-data="{ open: false }" class>
               <a @click="open = ! open" href="#">My Works</a>
               <ul id="myworks" class="hidden">
                 <li x-show="open" @click.outside="open = false"><a href="#">Web Dev.</a></li>
@@ -68,18 +74,20 @@
             <span class="block">technician, completing my training in 2017.</span>
             <span class="block">Since then, I've gained valuable</span>
             <span class="block">experience in the field, working as an</span>
-            <span class="block">I.T. Technician at <a class="font font-bold" href="http://onshoreconstruction.com/index.php">Onshore Constructions</a></span>
-            <span class="block">and as a Web Developer at <a class="font font-bold" href="https://buildboss.com/">BuildBoss.</a></span>
+            <span class="block">I.T. Technician at <a class="font font-bold"
+                href="http://onshoreconstruction.com/index.php">Onshore Constructions</a></span>
+            <span class="block">and as a Web Developer at <a
+                class="font font-bold" href="https://buildboss.com/">BuildBoss.</a></span>
             <span class="block">Currently, I am pursuing my education </span>
-            <span class="block">at <a class="font font-bold" href="https://www.byui.edu/">Brigham Young University-Idaho</a></span>
+            <span class="block">at <a class="font font-bold"
+                href="https://www.byui.edu/">Brigham Young University-Idaho</a></span>
             <span class="block">with the goal of becoming a Software Engineer.</span>
           </div>
         </section>
-
         <section>
         </section>
       </main>
-      <footer class="flex justify-around gap-8">
+      <footer class="flex flex-col justify-around gap-8">
         <!-- <div class="flex"> -->
         <a href="https://github.com/jayhklasiq">
           <svg xmlns="http://www.w3.org/2000/svg" height="2em"
