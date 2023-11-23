@@ -1,0 +1,23 @@
+[
+  {
+    "id": "webDev",
+    "title": "Web Development Showcase",
+    "body": "Explore my web development projects and skills.",
+    "linkText": "View Web Dev Projects",
+    "linkUrl": "#"
+  },
+  {
+    "id": "cSharp",
+    "title": "Course Final Project: JK Online Store",
+    "body": "Designed and programmed a C# e-commerce console app with user accounts and a simple checkout. The Online store has different stores and a function that adds and removes items from the cart.",
+    "linkText": "View Repository",
+    "linkUrl": "https://github.com/jayhklasiq/cse210_jk/tree/main/final/FinalProject"
+  },
+  {
+    "id": "python",
+    "title": "Course Final Project: Password Retriever",
+    "body": "Designed and programmed a Python app where a user can retrieve their password. The application gets a phone number from the user and checks if it's stored. It then sends the user a randomly generated OTP which they use to recover their account.",
+    "linkText": "View Repository",
+    "linkUrl": "https://github.com/jayhklasiq/cse111/tree/master/wk12/coded_files/prove"
+  }
+]

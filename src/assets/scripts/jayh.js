@@ -24,13 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
       page.style.filter = 'blur(4px)';
 
       // Display content based on the clicked ID
-      if (id === 'webDev') {
-        displayWebDevContent();
-      } else if (id === 'cSharp') {
-        displayCSharpContent();
-      } else if (id === 'python') {
-        displayPythonContent();
-      }
+      displayContent(id);
     });
   });
 });
@@ -46,45 +40,34 @@ document.addEventListener('click', function (event) {
   }
 });
 
-function displayWebDevContent() {
-  displayContent(`
-    <div class="bg-[#354f52] text-center border-2 border-solid border-gray-300 rounded-lg p-4">
-      <h2 class="font-bold mb-4">Web Development Showcase</h2>
-      <p class="mb-4">Explore my web development projects and skills.</p>
-      <a class="hover:text-lg bg-[#52796f] p-2 rounded-md mt-8" href="#">View Web Dev Projects</a>
-    </div>
-  `);
+function displayContent(id) {
+  // Fetch data from the JSON file based on the ID
+  fetch('/src/assets/peronalDetails.json')
+    .then(response => response.json())
+    .then(data => {
+      // Find the corresponding data for the clicked ID
+      const contentData = data.find(item => item.id === id);
+
+      if (contentData) {
+        // Create content HTML using the data
+        const contentHTML = `
+          <div class="bg-[#354f52] text-center border-2 border-solid border-gray-300 rounded-lg p-4">
+            <h2 class="font-bold mb-4">${contentData.title}</h2>
+            <p class="mb-4">${contentData.body}</p>
+            <a class="hover:text-lg bg-[#52796f] p-2 rounded-md mt-8" href="${contentData.linkUrl}">${contentData.linkText}</a>
+          </div>
+        `;
+
+        // Create a container div for the content
+        let contentContainer = document.createElement('div');
+        contentContainer.innerHTML = contentHTML;
+
+        // Add Tailwind CSS classes for centering the content
+        contentContainer.classList.add('fixed', 'inset-0', 'flex', 'items-center', 'm-40', 'text-white', 'contentContainer');
+
+        // Append the container to the body
+        document.body.appendChild(contentContainer);
+      }
+    })
+    .catch(error => console.error('Error fetching data:', error));
 }
-
-function displayCSharpContent() {
-  displayContent(`
-    <div class="bg-[#354f52] text-center border-2 border-solid border-gray-300 rounded-lg p-4">
-      <h2 class="font-bold mb-4">Course Final Project: JK Online Store</h2>
-      <p class="mb-4">Designed and programmed a C# e-commerce console app with user accounts and a simple checkout. The Online store has different stores and a function that adds and removes items from the cart.</p>
-      <a class="hover:text-lg bg-[#52796f] p-2 rounded-md mt-8" href="https://github.com/jayhklasiq/cse210_jk/tree/main/final/FinalProject">View Repository</a>
-    </div>
-  `);
-}
-
-function displayPythonContent() {
-  displayContent(`
-    <div class="bg-[#354f52] text-center border-2 border-solid border-gray-300 rounded-lg p-4">
-      <h2 class="font-bold mb-4">Course Final Project: Password Retriever</h2>
-      <p class="mb-4">Designed and programmed a Python app where a user can retrieve their password. The application gets a phone number from the user and checks if it's stored. It then sends the user a randomly generated OTP which they use to recover their account.</p>
-      <a class="hover:text-lg bg-[#52796f] p-2 rounded-md mt-8" href="https://github.com/jayhklasiq/cse111/tree/master/wk12/coded_files/prove">View Repository</a>
-    </div>
-  `);
-}
-
-function displayContent(contentHTML) {
-  // Create a container div for the content
-  let contentContainer = document.createElement('div');
-  contentContainer.innerHTML = contentHTML;
-
-  // Add Tailwind CSS classes for centering the content
-  contentContainer.classList.add('fixed', 'inset-0', 'flex', 'items-center', 'm-40', 'text-white', 'contentContainer');
-
-  // Append the container to the body
-  document.body.appendChild(contentContainer);
-}
-
