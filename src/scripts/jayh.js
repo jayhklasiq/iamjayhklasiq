@@ -42,7 +42,7 @@ document.addEventListener('click', function (event) {
 
 function displayContent(id) {
   // Fetch data from the JSON file based on the ID
-  fetch('/src/peronalDetails.json')
+  fetch('peronalDetails.json')
     .then(response => response.json())
     .then(data => {
       // Find the corresponding data for the clicked ID
