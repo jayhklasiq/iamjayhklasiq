@@ -2522,10 +2522,22 @@ video {
   }
 }
 
+@media (min-width: 768px) {
+  .md\:gap-1 {
+    gap: 0.25rem;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   @media (min-width: 1024px) {
     .dark\:lg\:hover\:\[paint-order\:markers\]:hover {
       paint-order: markers;
     }
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:gap-4 {
+    gap: 1rem;
   }
 }
