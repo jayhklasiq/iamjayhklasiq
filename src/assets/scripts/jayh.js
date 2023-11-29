@@ -63,11 +63,54 @@ function displayContent(id) {
         contentContainer.innerHTML = contentHTML;
 
         // Add Tailwind CSS classes for centering the content
-        contentContainer.classList.add('fixed', 'inset-0', 'flex', 'items-center', 'm-40', 'text-white', 'contentContainer');
+        contentContainer.classList.add('fixed', 'inset-0', 'flex', 'justify-center', 'items-center', 'm-40', 'text-white', 'contentContainer');
 
         // Append the container to the body
         document.body.appendChild(contentContainer);
       }
     })
     .catch(error => console.error('Error fetching data:', error));
+}
+
+// Check if localStorage is supported
+if (typeof (Storage) !== "undefined") {
+  // Get the visit count from localStorage, default to 0 if not set
+  var visitCount = localStorage.getItem('visitCount') || 0;
+
+  // Increment the visit count
+  visitCount++;
+
+  // Update the visit count in localStorage
+  localStorage.setItem('visitCount', visitCount);
+
+  // Create a popup element
+  var popup = document.createElement('div');
+  popup.className = 'popup';
+  popup.style.paddingRight = '30px';
+
+
+  // Display different messages based on the visit count
+  if (visitCount === 1) {
+    // First-time visitor
+    popup.innerHTML = "<p>Welcome! I hope at the end, you set an appointment so we talk about your next website.</p>";
+  } else if (visitCount > 2) {
+    // Returning visitor (more than 2 visits)
+    popup.innerHTML = "<p>Welcome back! I hope you've set up that appointment.</p>";
+  }
+
+  // Add a close button
+  var closeButton = document.createElement('span');
+  closeButton.className = 'close-btn';
+  closeButton.innerHTML = '&times;'; // "x" symbol
+  closeButton.onclick = function () {
+    popup.style.display = 'none';
+  };
+
+  popup.appendChild(closeButton);
+
+  // Append the popup to the body
+  document.body.appendChild(popup);
+} else {
+  // If localStorage is not supported
+  console.error("LocalStorage is not supported in your browser. Please enable it for the best experience.");
 }
