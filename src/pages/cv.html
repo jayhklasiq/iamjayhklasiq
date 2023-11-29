@@ -24,13 +24,36 @@
     <meta name="twitter:image"
       content="https://scontent.facc5-2.fna.fbcdn.net/v/t39.30808-6/331349152_1333638284101163_8020748355023949435_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFNOklbsUfmwYFkCOmwEw_-FJTBOHYmM-MUlME4diYz46QopyCi1OAhyvThjAAxgkrEiOMWZHwtIhdlPMs2I6BS&_nc_ohc=ylzvPnvR1_oAX-buvRP&_nc_zt=23&_nc_ht=scontent.facc5-2.fna&oh=00_AfAqCfkGqRKFsIL5XgwPOBanKBc4OdNyUvPh_mr9qTWLDw&oe=64BE5F5C">
     <link rel="stylesheet" href="/node_modules/normalize.css/normalize.css">
-    <link rel="stylesheet" href="/src/assets/styles/output.css">
+    <link rel="stylesheet" href="/src/styles/output.css">
     <link rel="icon" href="images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Kanit:wght@800&family=Merriweather:ital@0;1&display=swap"
       rel="stylesheet">
+    <style>
+      .popup {
+        position: fixed;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+      }
+
+      .close-btn {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    </style>
   </head>
 
   <body class="bg-[#CAD2C5]">
@@ -40,7 +63,7 @@
         <div id="headerImg">
           <a class="h-4/5" href="/src/index.html"><img
               class="border border-transparent rounded-lg"
-              src="/src/assets/images/linkedin-cover-img.jpg"
+              src="/src/images/linkedin-cover-img.jpg"
               alt="Joshua O. Olaoye's cover art image" class="header_img"></a>
         </div>
         <nav class="">
@@ -67,7 +90,7 @@
           </style> -->
           <h1 class="p-4 text-[#2f3e46]">My Resume</h1>
           <p class="p-4 text-[#2f3e46]">
-            <a class="font-meri hover:text-lg text-[#2f3e46] bg-[#ffffff] p-2 rounded-md mt-8" href="/src/assets/Joshua-Olaoye-Web Developer-Resume.pdf" target="_blank">Download Resume</a>
+            <a class="font-meri hover:text-lg text-[#2f3e46] bg-[#ffffff] p-2 rounded-md mt-8" href="/src/Joshua-Olaoye-Web Developer-Resume.pdf" target="_blank">Download Resume</a>
           </p>
           <div id="viewer" style="width: 100%; height: 500px;">
           </div>
@@ -79,8 +102,8 @@
             });
           </script>
           <!-- Calendly badge widget begin -->
-          <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-          <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+          <link href="https:/.calendly.com/external/widget.css" rel="stylesheet">
+          <script src="https:/.calendly.com/external/widget.js" type="text/javascript" async></script>
           <script type="text/javascript">window.onload = function () { Calendly.initBadgeWidget({ url: 'https://calendly.com/joshua-olaoye/30min', text: 'Let\'s Talk About Your Next Website', color: '#252422', textColor: '#ffffff', branding: true }); }</script>
           <!-- Calendly badge widget end -->
         </div>
@@ -110,7 +133,7 @@
         <!-- </div> -->
       </footer>
     </div>
-    <script src="/src/assets/scripts/jayh.js" defer></script>
+    <script src="/src/scripts/jayh.js" defer></script>
   </body>
 
 </html>
