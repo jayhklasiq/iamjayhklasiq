@@ -10,6 +10,7 @@ document.getElementById('myWorks').addEventListener('click', function () {
 });
 
 
+// Pop up repo
 document.addEventListener('DOMContentLoaded', function () {
   let links = document.querySelectorAll('#myworks > li > a');
   let idArray = Array.from(links).map(function (link) {
@@ -28,7 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
-
 
 // Add click event listener to remove the blur and div when clicked outside the div
 document.addEventListener('click', function (event) {
@@ -49,9 +49,10 @@ function displayContent(id) {
       const contentData = data.find(item => item.id === id);
 
       if (contentData) {
-        // Create content HTML using the data
+        // Create content HTML using the data, including the styled close button (X)
         const contentHTML = `
-          <div class="bg-[#354f52] text-center border-2 border-solid border-gray-300 rounded-lg p-4">
+          <div class="bg-[#354f52] text-center border-2 border-solid border-gray-300 rounded-lg p-4 relative mx-4 md:mx-10 lg:mx-20 xl:mx-32 2xl:mx-48">
+            <button id="closeButton" class="absolute top-4 right-4 text-white hover:text-gray-300 cursor-pointer focus:outline-none bg-[#354f52] rounded-full w-8 h-8">&times;</button>
             <h2 class="font-bold mb-4">${contentData.title}</h2>
             <p class="mb-4">${contentData.body}</p>
             <a class="hover:text-lg bg-[#52796f] p-2 rounded-md mt-8" href="${contentData.linkUrl}">${contentData.linkText}</a>
@@ -63,10 +64,17 @@ function displayContent(id) {
         contentContainer.innerHTML = contentHTML;
 
         // Add Tailwind CSS classes for centering the content
-        contentContainer.classList.add('fixed', 'inset-0', 'flex', 'justify-center', 'items-center', 'm-40', 'text-white', 'contentContainer');
+        contentContainer.classList.add('fixed', 'inset-0', 'flex', 'justify-center', 'items-center', 'text-white', 'contentContainer');
 
         // Append the container to the body
         document.body.appendChild(contentContainer);
+
+        // Add a click event listener to the close button
+        document.getElementById('closeButton').addEventListener('click', function () {
+          // Remove the blur and content container when the close button is clicked
+          page.style.filter = 'none';
+          contentContainer.remove();
+        });
       }
     })
     .catch(error => console.error('Error fetching data:', error));
