@@ -6,9 +6,9 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      akaya: ['Akaya Teliviga'],
+      akaya: ['Spectral'],
       meri: ['Merriweather'],
-      kanit: ['Kanit']
+      kanit: ['Karla']
     }
   },
   plugins: [],
