@@ -30,15 +30,15 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-// Add click event listener to remove the blur and div when clicked outside the div
-document.addEventListener('click', function (event) {
-  const page = document.getElementById('page');
-  const contentContainer = document.getElementById('contentContainer');
-  if (event.target !== contentContainer && !contentContainer.contains(event.target)) {
-    page.style.filter = 'none';
-    contentContainer.remove();
-  }
-});
+// // Add click event listener to remove the blur and div when clicked outside the div
+// document.addEventListener('click', function (event) {
+//   const page = document.getElementById('page');
+//   const contentContainer = document.getElementById('contentContainer');
+//   if (event.target !== contentContainer && !contentContainer.contains(event.target)) {
+//     page.style.filter = 'none';
+//     contentContainer.remove();
+//   }
+// });
 
 function displayContent(id) {
   // Fetch data from the JSON file based on the ID
